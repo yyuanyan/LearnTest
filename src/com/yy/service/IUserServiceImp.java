@@ -19,4 +19,8 @@ public class IUserServiceImp implements IUserService {
     public void add() {
         System.out.println("创建用户..."+ name);
     }
+
+    public IUserServiceImp() {
+        System.out.println("IUserServiceImp()被调用了...");
+    }
 }
