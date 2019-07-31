@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+       xsl:schemaLocation="http://www.springframework.org/schema/beans http://springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 装配Bean的三种方式，所谓的装配就是在xml写一个bean标签-->
+    <!--第一种方法:new 实现类-->
+    <bean id ="userservice1" class="com.yy.service.IUserServiceImp"></bean>
+
+    <!--第二种方法：静态工厂方法-->
+    <bean id = "userservice2" class="com.yy.service.UserServiceFactory" factory-method="creatUserService"></bean>
+
+
+    <!-- 第三种方法：通过实例工厂方法-->
+
+    <!--创建实例factory2 bean-->
+    <bean id="factory2" class="com.yy.service.UserServiceFactory2"></bean>
+    <bean id ="userservice3" factory-bean="factory2" factory-method="creatUserService"></bean>
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsl:schemaLocation="http://www.springframework.org/schema/beans http://springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<!--    <bean id="stu" class="com.yy.model.Student">-->
+        <!--1、构造方法注入属性-->
+        <!--相当于调用public Student(String username, String password) 构造方法
+        同理 若那么为username+age 则调用public Student(String username, int age) 构造方法-->
+        <!--<constructor-arg name="username" value="YYUANYAN"></constructor-arg>
+        <constructor-arg name="password" value="123"></constructor-arg>-->
+
+<!--        &lt;!&ndash;索引方法注入属性&ndash;&gt;-->
+<!--        <constructor-arg index="0" value="YYYYYYYY" type="java.lang.String"></constructor-arg>-->
+<!--        &lt;!&ndash;此处type==int 则输出结果将调用的是public Student(String username, int age) 构造方法&ndash;&gt;-->
+<!--        <constructor-arg index="1" value="123" type="java.lang.String"></constructor-arg>-->
+        <!--2、set方法注入属性-->
+<!--        <property name="username" value="yyuanyan"></property>-->
+<!--        3、通过p命名空间-->
+    <bean id="stu" class="com.yy.model.Student" p:username="yyuanyanyayaya" p:password="1234564789" p:age="22">
+    </bean>
+</beans>

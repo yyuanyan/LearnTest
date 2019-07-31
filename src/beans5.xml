@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+       xsl:schemaLocation="http://www.springframework.org/schema/beans http://springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--bean的作用域-->
+    <bean id ="user" class="com.yy.model.User"  init-method="myInit" destroy-method="mydestory">
+        <property name="username" value="yyuanyan"></property>
+        <property name="password" value="123"></property>
+    </bean>
+    <!--配置bean处理器-->
+    <bean id="beanProcessor" class="com.yy.model.MyBeanPostProcessor"></bean>
+</beans>
